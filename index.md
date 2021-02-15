@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+## Robinhood Policy Engine RPM Repo
 
-You can use the [editor on GitHub](https://github.com/cfultz/robinhood-rpms/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Hosted to make things easier with the Docker image [cfultz/robinhood:latest](https://github.com/cfultz/robinhood-docker)'s installation process of the RPM files. This also will assist in keeping them up-to-date instead of having to update with a new image everytime a release occures.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Repo File
 
-### Markdown
+You are free to utilize this same repo file for your bare metal installations as well.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```RPM Repo
+[robinhood]
+name=Robinhood Policy Engine
+baseurl=https://fultz.dev/repo/rhel/7
+enabled=1
+gpgcheck=0
 ```
+#### Reason for 'gpgcheck=0'
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The RPM files found on SourceForge were not signed by cea it seems. This will smooth the installation process a bit. Perhaps in the future I will compile/sign them myself.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cfultz/robinhood-rpms/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Contact
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+[@cfultz](https://github.com/cfultz/) hosts this repo based on the RPM files from [@cea-hpc](https://github.com/cea-hpc)'s SourceForge page [located here](https://sourceforge.net/projects/robinhood/). If you have questions regardin the repo, please contact him. If you have issues/questions with/about the RPM files themselves or the source code, contact [@cea-hpc](https://github.com/cea-hpc) directly.
